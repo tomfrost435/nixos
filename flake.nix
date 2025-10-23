@@ -3,7 +3,11 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
   };
   outputs =
-    { self, nixpkgs, disko }:
+    {
+      self,
+      nixpkgs,
+      disko,
+    }:
     {
       nixosConfigurations.tom = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -12,12 +16,7 @@
     };
 }
 
-
-
-
-
-
-disko = {
-  url = "github:nix-community/disko";
-  inputs.nixpkgs.follows = "nixpkgs";
-}
+# disko = {
+#   url = "github:nix-community/disko";
+#   inputs.nixpkgs.follows = "nixpkgs";
+# }

@@ -4,7 +4,7 @@
   disko.devices = {
     disk = {
       MAIN = {
-        device = "<device-name>"; # Change device name
+        device = "dev/vda"; # Change device name
         type = "disk";
         content = {
           type = "gpt";
@@ -29,22 +29,12 @@
               size = "100%";
               content = {
                 type = "btrfs";
+                mountpoint = "/";
                 mountOptions = [
                   "compress=zstd" # Some kind of compression
                   "noatime" # Disable file and directory access time recording to "improve performance"
                 ];
                 extraArgs = [ "-f" ]; # Override existing partition
-                subvolumes = {
-
-                  "root" = {
-                    mountpoint = "/";
-                  };
-
-                  # "home" = {
-                  #   mountpoint = "/home";
-                  # };
-                };
-
               };
             };
 
