@@ -16,7 +16,6 @@
               size = "512M";
               type = "EF00";
               content = {
-                name = "ESP";
                 type = "filesystem";
                 format = "vfat";
                 mountpoint = "/boot";
@@ -26,15 +25,15 @@
 
             # Storage
             STORAGE = {
+              label = "nixos";
               size = "100%";
               content = {
-                name = "storage";
                 type = "btrfs";
                 mountOptions = [
                   "compress=zstd" # Some kind of compression
                   "noatime" # Disable file and directory access time recording to "improve performance"
                 ];
-                # extraArgs = [ "-f" ]; # Override existing partition
+                extraArgs = [ "-f" ]; # Override existing partition
                 subvolumes = {
 
                   "root" = {
