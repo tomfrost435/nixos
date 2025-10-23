@@ -4,7 +4,7 @@
   disko.devices = {
     disk = {
       MAIN = {
-        device = "dev/vda"; # Change device name
+        device = "/dev/vda"; # Change device name
         type = "disk";
         content = {
           type = "gpt";
