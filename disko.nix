@@ -4,7 +4,7 @@
   disko.devices = {
     disk = {
       MAIN = {
-        device = "/dev/disk/by-diskseq/1"; # Optionally change device name
+        device = "<device-name>"; # Change device name
         type = "disk";
         content = {
           type = "gpt";
