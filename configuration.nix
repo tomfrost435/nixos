@@ -103,8 +103,12 @@
 
     pipewire
 
-   home-manager
+    home-manager
+
+   github-desktop
   ];
+
+  services.passSecretService.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
