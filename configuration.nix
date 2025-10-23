@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   lib,
   pkgs,
   ...
@@ -19,11 +20,15 @@
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
+  users.groups.networkmanager.members = [ "tom" ];
 
   # Time and Location
 
   time.timeZone = "Europe/Rome";
-  i18n.defaultLocale = "it_IT.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.extraLocaleSettings = {
+    LC_ALL = "en_US.UTF-8";
+  };
 
   # Plasma KDE
 
@@ -40,6 +45,7 @@
 
   # Audio
 
+  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -54,49 +60,59 @@
     isNormalUser = true;
     extraGroups = [
       "wheel"
-      "networkmanager"
     ];
   };
 
+  # Packages
+
+  programs = {
+    git = {
+      enable = true;
+      config = {
+        user.name = "Tommaso Acciarresi";
+        user.email = "49035039+tomfrost435@users.noreply.github.com";
+      };
+    };
+
+    steam = {
+      enable = true;
+      extraCompatPackages = [ pkgs.protom-ge-bin ];
+    };
+  };
+
   environment.systemPackages = with pkgs; [
-    # Plasma KDE Packages
-    kdePackages.kcalc
-    kdePackages.kclock
-    kdePackages.ksystemlog
-    kdePackages.sddm-kcm
-
     alacritty
-    mpv
+    bitwarden-desktop
     discord
-    obsidian
-    firefox
-    steam
-
-    neofetch
-    git
+    easyeffects
     ffmpeg
-    zip
-    unzip
-    yt-dlp
-
-    wayland
-    wayland-utils
-    wl-clipboard
-
-    pipewire
-
-    syncthingtray
-
+    firefox
     home-manager
+    krita
+    localsend
+    mpv
+    neofetch
+    obsidian
+    qbittorrent
+    spotify
+    calf # Used by easyeffects
+    lsp-plugins # Used by easyeffects
+    syncthingtray
+    thunderbird
+    vencord # Used by discord
+    yt-dlp
   ];
 
-  # ???
+  # VM
 
-  services.passSecretService.enable = true;
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = [ "tom" ];
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 
-  # OpenSSH
+  # Allow non-open-source packages
 
-  services.openssh.enable = true;
+  nixpkgs.config.allowUnfree = true;
 
   # Enable flakes
 
@@ -105,15 +121,20 @@
     "flakes"
   ];
 
-  # Allow non-open-source packages
-
-  nixpkgs.config.allowUnfree = true;
-
   # Nix Garbage Collector
+
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 30d";
+  };
+  nix.settings.auto-optimise-store = true;
+
+  # Automatic Updates
+
+  system.autoUpgrade = {
+    enable = true;
+    dates = "weekly";
   };
 
   system.stateVersion = "25.05"; # Do NOT change
