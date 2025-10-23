@@ -12,10 +12,10 @@
 
             # UEFI Boot
             ESP = {
-              label = "boot";
               size = "512M";
               type = "EF00";
               content = {
+                label = "boot";
                 type = "filesystem";
                 format = "vfat";
                 mountpoint = "/boot";
@@ -25,9 +25,9 @@
 
             # Storage
             STORAGE = {
-              label = "nixos";
               size = "100%";
               content = {
+                label = "nixos";
                 type = "btrfs";
                 mountpoint = "/";
                 mountOptions = [
