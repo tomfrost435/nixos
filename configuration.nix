@@ -1,8 +1,8 @@
 {
   config,
-  inputs,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 
@@ -27,7 +27,7 @@
   time.timeZone = "Europe/Rome";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
-    LC_ALL = "en_US.UTF-8";
+    LC_ALL = "it_IT.UTF-8";
   };
 
   # Plasma KDE
@@ -40,13 +40,12 @@
       sddm.enable = true;
       sddm.wayland.enable = true;
     };
-
   };
 
   # Audio
 
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -76,7 +75,7 @@
 
     steam = {
       enable = true;
-      extraCompatPackages = [ pkgs.protom-ge-bin ];
+      extraCompatPackages = [ pkgs.proton-ge-bin ];
     };
 
     java.enable = true;
@@ -100,7 +99,8 @@
     spotify
     calf # Used by easyeffects
     lsp-plugins # Used by easyeffects
-    syncthingtray
+    syncthing # Used by syncthingtray
+    syncthingtray 
     thunderbird
     vencord # Used by discord
     yt-dlp
