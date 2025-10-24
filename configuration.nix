@@ -57,9 +57,7 @@
 
   users.users.tom = {
     isNormalUser = true;
-    extraGroups = [
-      "wheel"
-    ];
+    extraGroups = [ "wheel" ];
   };
 
   # Packages
@@ -100,7 +98,7 @@
     calf # Used by easyeffects
     lsp-plugins # Used by easyeffects
     syncthing # Used by syncthingtray
-    syncthingtray 
+    syncthingtray
     thunderbird
     vencord # Used by discord
     yt-dlp
@@ -117,21 +115,22 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  # Enable flakes
+  # Nix Settings
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
-  # Nix Garbage Collector
-
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
   };
-  nix.settings.auto-optimise-store = true;
 
   # Automatic Updates
 
