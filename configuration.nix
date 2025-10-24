@@ -84,23 +84,24 @@
   environment.systemPackages = with pkgs; [
     alacritty
     bitwarden-desktop
+    calf # Used by easyeffects
     discord
     easyeffects
     ffmpeg
     firefox
     home-manager
     krita
+    lsp-plugins # Used by easyeffects
     mpv
     neofetch
     obsidian
     qbittorrent
     spotify
-    calf # Used by easyeffects
-    lsp-plugins # Used by easyeffects
     syncthing # Used by syncthingtray
     syncthingtray
     thunderbird
     vencord # Used by discord
+    vscode
     yt-dlp
   ];
 
@@ -131,6 +132,10 @@
       options = "--delete-older-than 30d";
     };
   };
+
+  # ZRAM
+
+  zramSwap.enable = true;
 
   # Automatic Updates
 
