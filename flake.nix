@@ -12,6 +12,7 @@
     {
       self,
       nixpkgs,
+      config,
       home-manager,
       ...
     }@inputs:
@@ -19,7 +20,7 @@
       system = "x86_64-linux";
     in
     {
-      nixosConfigurations.${config.networking.hostName} = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
