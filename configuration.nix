@@ -97,6 +97,7 @@
     spotify
     calf # Used by easyeffects
     lsp-plugins # Used by easyeffects
+    syncthing
     syncthingtray
     thunderbird
     vencord # Used by discord
