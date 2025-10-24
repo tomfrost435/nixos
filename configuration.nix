@@ -1,8 +1,8 @@
 {
   config,
-  inputs,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 
@@ -27,7 +27,7 @@
   time.timeZone = "Europe/Rome";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
-    LC_ALL = "en_US.UTF-8";
+    LC_ALL = "it_IT.UTF-8";
   };
 
   # Plasma KDE
@@ -40,7 +40,6 @@
       sddm.enable = true;
       sddm.wayland.enable = true;
     };
-
   };
 
   # Audio
