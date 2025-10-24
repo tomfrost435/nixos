@@ -78,6 +78,10 @@
       enable = true;
       extraCompatPackages = [ pkgs.protom-ge-bin ];
     };
+
+    java.enable = true;
+
+    localsend.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -89,7 +93,6 @@
     firefox
     home-manager
     krita
-    localsend
     mpv
     neofetch
     obsidian
