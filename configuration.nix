@@ -45,8 +45,8 @@
 
   # Audio
 
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -76,7 +76,7 @@
 
     steam = {
       enable = true;
-      extraCompatPackages = [ pkgs.protom-ge-bin ];
+      extraCompatPackages = [ pkgs.proton-ge-bin ];
     };
   };
 
@@ -97,8 +97,8 @@
     spotify
     calf # Used by easyeffects
     lsp-plugins # Used by easyeffects
-    syncthing
-    syncthingtray
+    syncthing # Used by syncthingtray
+    syncthingtray 
     thunderbird
     vencord # Used by discord
     yt-dlp
