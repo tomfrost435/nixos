@@ -105,6 +105,10 @@
     yt-dlp
   ];
 
+  # ZRAM
+
+  zramSwap.enable = true;
+
   # VM
 
   programs.virt-manager.enable = true;
@@ -112,9 +116,12 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
 
-  # Allow non-open-source packages
+  # Automatic Updates
 
-  nixpkgs.config.allowUnfree = true;
+  system.autoUpgrade = {
+    enable = true;
+    dates = "weekly";
+  };
 
   # Nix Settings
 
@@ -132,17 +139,7 @@
       options = "--delete-older-than 30d";
     };
   };
-
-  # ZRAM
-
-  zramSwap.enable = true;
-
-  # Automatic Updates
-
-  system.autoUpgrade = {
-    enable = true;
-    dates = "weekly";
-  };
+  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "25.05"; # Do NOT change
 }

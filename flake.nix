@@ -9,13 +9,30 @@
   };
 
   outputs =
-    { self, nixpkgs, ... }@inputs:
     {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
+    let
+      system = "x86_64-linux";
+    in
+    {
+      nixosConfigurations.${config.networking.hostName} = nixpkgs.lib.nixosSystem {
+        inherit system;
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-          inputs.home-manager.nixosModules.default
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.tom = import ./home.nix;
+              backupFileExtension = "backup";
+            };
+          }
         ];
       };
     };
