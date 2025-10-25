@@ -21,7 +21,7 @@
       user = "tom";
       hosts = [
         {
-          hostname = "nixos_desktop";
+          hostname = "nixos-desktop";
           stateVersion = "25.05";
         }
       ];

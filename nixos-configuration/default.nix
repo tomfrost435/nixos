@@ -9,5 +9,7 @@
     ./plasma.nix
     ./user.nix
     ./zram.nix
+
+    ./programs
   ];
 }
