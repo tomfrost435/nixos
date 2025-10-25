@@ -1,9 +1,9 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -22,10 +22,10 @@
       hosts = [
         {
           hostname = "nixos-desktop";
-          stateVersion = "25.05";
+          stateVersion = "25.11";
         }
       ];
-      homeStateVersion = "25.05";
+      homeStateVersion = "25.11";
 
       makeSystem =
         { hostname, stateVersion }:

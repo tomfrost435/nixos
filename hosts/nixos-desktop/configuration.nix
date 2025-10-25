@@ -9,7 +9,7 @@
 
   environment.systemPackages = [ pkgs.home-manager ];
 
-  nixpkgs.config.allowUnfree = true;
+  time.timeZone = "Europe/Rome";
 
   system.stateVersion = stateVersion;
 }
