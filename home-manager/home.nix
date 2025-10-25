@@ -11,5 +11,4 @@
     homeDirectory = "/home/${user}";
     stateVersion = homeStateVersion;
   };
-
 }
