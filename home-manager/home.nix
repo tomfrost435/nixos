@@ -6,6 +6,8 @@
     ./home-packages.nix
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   programs.bash = {
     enable = true;
   };
