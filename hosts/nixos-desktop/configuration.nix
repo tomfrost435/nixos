@@ -3,11 +3,12 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./local-packages.nix
-    ../../nixos-configuration
+    ../../nixos-modules
   ];
 
   environment.systemPackages = [ pkgs.home-manager ];
+
+  steam.enable = true;
 
   time.timeZone = "Europe/Rome";
 
