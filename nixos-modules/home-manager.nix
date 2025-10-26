@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = [ pkgs.home-manager ];
-  # imports = [ inputs.home-manager.nixosModules.default ];
+  imports = [ inputs.home-manager.nixosModules.default ];
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
