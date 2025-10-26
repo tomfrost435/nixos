@@ -9,6 +9,7 @@
     ./audio.nix
     ./bootloader.nix
     ./home-manager.nix
+    ./hyprland.nix
     ./locale.nix
     ./networking.nix
     ./nix.nix
