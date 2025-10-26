@@ -18,7 +18,7 @@
     {
       nixosConfigurations = {
 
-        nixos-desktop = nixpkgs.lib.nixosSystem {
+        "nixos-desktop" = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs user version; };
           modules = [
             ./hosts/nixos-desktop/configuration.nix

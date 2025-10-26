@@ -1,11 +1,6 @@
 { user, version, ... }:
 
 {
-  home = {
-    username = user;
-    homeDirectory = "/home/${user}";
-  };
-
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -13,8 +8,13 @@
     };
   };
 
-  programs.home-manager.enable = true;
-  systemd.user.startServices = "sd-switch";
+  # programs.home-manager.enable = true;
+  # systemd.user.startServices = "sd-switch";
+
+  home = {
+    username = user;
+    homeDirectory = "/home/${user}";
+  };
 
   home.stateVersion = version;
 }
