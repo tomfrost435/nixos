@@ -7,9 +7,9 @@
 
   networking.hostName = "nixos-desktop";
 
-  # environment.systemPackages = [ pkgs.home-manager ]; # required
-
   time.timeZone = "Europe/Rome";
+
+  plasma.enable = true;
 
   system.stateVersion = version;
 }
