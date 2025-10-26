@@ -41,6 +41,7 @@
 
           modules = [
             ./hosts/${hostname}/configuration.nix
+            ./nixos-modules
           ];
         };
 
