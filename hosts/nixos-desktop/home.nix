@@ -11,12 +11,6 @@
   # programs.home-manager.enable = true;
   # systemd.user.startServices = "sd-switch";
 
-  home-manager = {
-    backupFileExtension = "backup";
-    # useGlobalPkgs = true;
-    # useUserPackages = true;
-  };
-
   home = {
     username = user;
     homeDirectory = "/home/${user}";
