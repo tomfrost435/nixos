@@ -1,6 +1,14 @@
 ## Commands
 
 ```bash
+git clone "https://github.com/tomfrost435/nixos.git" ./NixOS
+```
+
+```bash
+cd NixOS
+```
+
+```bash
 sudo nixos-rebuild switch --flake .#[hostname]
 ```
 
