@@ -9,7 +9,8 @@
 
   time.timeZone = "Europe/Rome";
 
-  # plasma.enable = true;
+  plasma.enable = false;
+  hyprland.enable = true;
 
   system.stateVersion = version;
 }
