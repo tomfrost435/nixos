@@ -9,7 +9,7 @@
 
   time.timeZone = "Europe/Rome";
 
-  plasma.enable = true;
+  # plasma.enable = true;
 
   system.stateVersion = version;
 }

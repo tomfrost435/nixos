@@ -20,5 +20,6 @@
         sddm.wayland.enable = true;
       };
     };
+
   };
 }

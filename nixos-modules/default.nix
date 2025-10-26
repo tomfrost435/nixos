@@ -21,6 +21,9 @@
   # Config
   update.enable = lib.mkDefault true;
 
+  plasma.enable = lib.mkDefault true;
+  hyprland.enable = lib.mkDefault false;
+
   # Programs
   steam.enable = lib.mkDefault true;
   virt-manager.enable = lib.mkDefault true;
