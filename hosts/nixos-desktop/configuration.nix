@@ -1,15 +1,19 @@
-{ pkgs, stateVersion, ... }:
+{ pkgs, version, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
   ];
 
-  environment.systemPackages = [ pkgs.home-manager ];
+  networking.hostName = nixos-desktop;
 
-  steam.enable = true;
+  nixpkgs.config.allowUnfree = true;
+
+  environment.systemPackages = [ pkgs.home-manager ]; # idk why
+
+  # steam.enable = true;
 
   time.timeZone = "Europe/Rome";
 
-  system.stateVersion = stateVersion;
+  system.stateVersion = version;
 }

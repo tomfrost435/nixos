@@ -1,3 +1,5 @@
+{ lib, ... }:
+
 {
   imports = [
     ./audio.nix
@@ -13,4 +15,6 @@
 
     ./programs
   ];
+
+  steam.enable = lib.mkDefault true;
 }
