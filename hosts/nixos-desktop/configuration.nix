@@ -7,7 +7,7 @@
 
   networking.hostName = "nixos-desktop";
 
-  # environment.systemPackages = [ pkgs.home-manager ]; # idk why
+  # environment.systemPackages = [ pkgs.home-manager ]; # required
 
   time.timeZone = "Europe/Rome";
 

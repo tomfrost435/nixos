@@ -1,7 +1,8 @@
-{ inputs, ... }:
+{ pkgs, ... }:
 
 {
-  imports = [ inputs.home-manager.nixosModules.default ];
+  environment.systemPackages = [ pkgs.home-manager ];
+  # imports = [ inputs.home-manager.nixosModules.default ];
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
