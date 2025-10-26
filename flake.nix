@@ -12,11 +12,11 @@
 
   outputs =
     {
-      self, # idk what this does
+      self,
       nixpkgs,
       home-manager,
       ...
-    }@inputs: # idk what this syntax is
+    }@inputs:
     let
       user = "tom";
       version = "25.11";

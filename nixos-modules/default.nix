@@ -2,6 +2,10 @@
 
 {
   imports = [
+    ./programs
+    ./services
+
+    ./allow-unfree.nix
     ./audio.nix
     ./bootloader.nix
     ./home-manager.nix
@@ -12,9 +16,14 @@
     ./update.nix
     ./user.nix
     ./zram.nix
-
-    ./programs
   ];
 
+  # Config
+  update.enable = lib.mkDefault true;
+
+  # Programs
   steam.enable = lib.mkDefault true;
+  virt-manager.enable = lib.mkDefault true;
+
+  # Services
 }
