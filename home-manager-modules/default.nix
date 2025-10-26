@@ -1,10 +1,10 @@
 {
   imports = [
     ./allow-unfree.nix
-    ./audio.nix
+    # ./audio.nix
     ./cli.nix
     ./git.nix
-    ./home-packages.nix
+    # ./home-packages.nix
     # ./hyprland.nix
   ];
 }
