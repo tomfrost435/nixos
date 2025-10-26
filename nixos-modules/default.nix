@@ -13,11 +13,11 @@
     ./locale.nix
     ./networking.nix
     ./nix.nix
-    # ./plasma.nix
+    ./plasma.nix
     ./update.nix
     ./user.nix
     ./zram.nix
-    ./hyprland.nix
+    # ./hyprland.nix
   ];
 
   # Config
