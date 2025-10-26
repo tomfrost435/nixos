@@ -17,6 +17,7 @@
     ./update.nix
     ./user.nix
     ./zram.nix
+    # ./hyprland.nix
   ];
 
   # Config
