@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
   ];
 
-  networking.hostName = nixos-desktop;
+  networking.hostName = "nixos-desktop";
 
   nixpkgs.config.allowUnfree = true;
 
