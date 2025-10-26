@@ -7,10 +7,9 @@
 
   networking.hostName = "nixos-desktop";
 
-  time.timeZone = "Europe/Rome";
+  virt-manager.enable = false;
 
-  plasma.enable = false;
-  hyprland.enable = true;
+  time.timeZone = "Europe/Rome";
 
   system.stateVersion = version;
 }

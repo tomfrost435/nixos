@@ -1,18 +1,4 @@
 {
-  user,
-  config,
-  lib,
-  ...
-}:
-
-{
-  options = {
-    hyprland.enable = lib.mkEnableOption "Enable hyprland";
-  };
-  config = lib.mkIf config.hyprland.enable {
-
-    programs.hyprland.enable = true;
-    services.getty.autologinUser = user;
-
-  };
+  programs.hyprland.enable = true;
+  services.getty.autologinUser = user;
 }
