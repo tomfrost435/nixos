@@ -20,7 +20,7 @@
   ];
 
   # Config
-  update.enable = lib.mkDefault true;
+  updates.enable = lib.mkDefault true;
 
   # Programs
   steam.enable = lib.mkDefault true;
