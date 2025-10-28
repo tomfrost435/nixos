@@ -9,6 +9,14 @@ cd ~/NixOS
 ```
 
 ```bash
+nixos-generate-config --dir ./hosts/[hostname]
+```
+
+```bash
+git add .
+```
+
+```bash
 sudo nixos-rebuild switch --flake .#[hostname]
 ```
 

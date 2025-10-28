@@ -13,7 +13,7 @@
     ./networking.nix
     ./nix.nix
     ./plasma.nix
-    ./update.nix
+    ./updates.nix
     ./user.nix
     ./zram.nix
     # ./hyprland.nix

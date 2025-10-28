@@ -2,9 +2,9 @@
 
 {
   options = {
-    update.enable = lib.mkEnableOption "Enable automatic NixOS updates";
+    updates.enable = lib.mkEnableOption "Enable automatic NixOS updates";
   };
-  config = lib.mkIf config.update.enable {
+  config = lib.mkIf config.updates.enable {
 
     system.autoUpgrade = {
       enable = true;
