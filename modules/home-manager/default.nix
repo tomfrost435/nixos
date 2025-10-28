@@ -1,9 +1,9 @@
 {
   imports = [
-    # ./audio.nix
     ./cli.nix
     ./git.nix
-    # ./home-packages.nix
     ./hyprland.nix
+    # ./audio.nix
+    # ./home-packages.nix
   ];
 }

@@ -22,6 +22,7 @@
           specialArgs = { inherit inputs user version; };
           modules = [
             ./hosts/nixos-desktop/configuration.nix
+            ./hosts/nixos-desktop/hardware-configuration.nix
             ./modules/nixos
           ];
         };

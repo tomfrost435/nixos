@@ -1,10 +1,6 @@
 { version, ... }:
 
 {
-  imports = [
-    ./hardware-configuration.nix
-  ];
-
   nixpkgs.config.allowUnfree = true;
 
   # Host-specific

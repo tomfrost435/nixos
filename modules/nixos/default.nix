@@ -11,10 +11,10 @@
     ./locale.nix
     ./networking.nix
     ./nix.nix
-    # ./plasma.nix
     ./updates.nix
     ./user.nix
     ./zram.nix
+    # ./plasma.nix
   ];
 
   # Config
