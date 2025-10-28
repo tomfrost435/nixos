@@ -5,10 +5,9 @@
     ./programs
     ./services
 
-    ./allow-unfree.nix
     ./audio.nix
     ./bootloader.nix
-    ./home-manager.nix
+    # ./home-manager.nix
     ./hyprland.nix
     ./locale.nix
     ./networking.nix

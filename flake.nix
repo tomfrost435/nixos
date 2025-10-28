@@ -6,7 +6,6 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
   outputs =
@@ -16,6 +15,7 @@
       version = "25.11";
     in
     {
+
       nixosConfigurations = {
 
         "nixos-desktop" = nixpkgs.lib.nixosSystem {
