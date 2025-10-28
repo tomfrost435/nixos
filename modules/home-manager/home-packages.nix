@@ -11,7 +11,6 @@
     spotify
     syncthingtray
     thunderbird
-    mpv
 
     # Programming
     vscode

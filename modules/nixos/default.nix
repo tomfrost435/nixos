@@ -7,16 +7,14 @@
 
     ./audio.nix
     ./bootloader.nix
-    # ./home-manager.nix
     ./hyprland.nix
     ./locale.nix
     ./networking.nix
     ./nix.nix
-    ./plasma.nix
+    # ./plasma.nix
     ./updates.nix
     ./user.nix
     ./zram.nix
-    # ./hyprland.nix
   ];
 
   # Config

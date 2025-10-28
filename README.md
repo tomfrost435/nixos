@@ -21,6 +21,10 @@ sudo nixos-rebuild switch --flake .#[hostname]
 ```
 
 ```bash
+nix run github:nix-community/home-manager -- home-manager switch --flake .#[user]
+```
+
+```bash
 home-manager switch --flake .#[user]
 ```
 

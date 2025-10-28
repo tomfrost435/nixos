@@ -22,7 +22,7 @@
           specialArgs = { inherit inputs user version; };
           modules = [
             ./hosts/nixos-desktop/configuration.nix
-            ./nixos-modules
+            ./modules/nixos
           ];
         };
 
@@ -35,7 +35,7 @@
           extraSpecialArgs = { inherit inputs user version; };
           modules = [
             ./hosts/nixos-desktop/home.nix
-            ./home-manager-modules
+            ./modules/home-manager
           ];
         };
 

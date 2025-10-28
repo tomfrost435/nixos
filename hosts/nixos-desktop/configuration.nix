@@ -6,10 +6,12 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
-  networking.hostName = "nixos-desktop";
 
+  # Host-specific
+  networking.hostName = "nixos-desktop";
   time.timeZone = "Europe/Rome";
 
+  # Modules
   virt-manager.enable = false;
   steam.enable = true;
 

@@ -4,6 +4,6 @@
     ./cli.nix
     ./git.nix
     # ./home-packages.nix
-    # ./hyprland.nix
+    ./hyprland.nix
   ];
 }
