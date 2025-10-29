@@ -35,3 +35,19 @@ home-manager switch --flake .#[user]
 Each host has its own `configuration.nix` and `home.nix` where they can toggle modules on or off
 
 `configuration.nix` imports `hardware-configuration.nix`
+
+## WIP
+
+- easyeffects (hm) (required dconf in nixos settings)
+- settle on terminal (bash, zsh, etc.)
+- direnv
+- nixos or hm?
+    - firefox
+    - java
+- neovim
+- waybar
+- sort modules into folders
+- systemd?
+- xdg
+- home.file
+- env variable and session variables

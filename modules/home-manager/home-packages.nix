@@ -10,9 +10,5 @@
     obsidian
     spotify
     syncthingtray
-    thunderbird
-
-    # Programming
-    vscode
   ];
 }
