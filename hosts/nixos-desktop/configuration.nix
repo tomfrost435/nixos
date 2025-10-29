@@ -8,8 +8,8 @@
   time.timeZone = "Europe/Rome";
 
   # Modules
-  virt-manager.enable = false;
   steam.enable = true;
+  virt-manager.enable = false;
 
   system.stateVersion = version;
 }
