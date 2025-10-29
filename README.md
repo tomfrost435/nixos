@@ -28,6 +28,10 @@ nix run github:nix-community/home-manager -- home-manager switch --flake .#[user
 home-manager switch --flake .#[user]
 ```
 
+```bash
+nix flake update
+```
+
 ## Structure
 
 `flake.nix` leads to `hosts/[hostname]`, it also imports `nixos-modules` and `home-manager-modules` into all hosts
@@ -38,12 +42,8 @@ Each host has its own `configuration.nix` and `home.nix` where they can toggle m
 
 ## WIP
 
-- easyeffects (hm) (required dconf in nixos settings)
 - settle on terminal (bash, zsh, etc.)
 - direnv
-- nixos or hm?
-    - firefox
-    - java
 - neovim
 - waybar
 - sort modules into folders

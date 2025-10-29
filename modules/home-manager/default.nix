@@ -1,8 +1,8 @@
 {
   imports = [
     ./alacritty.nix
-    ./audio.nix
     ./cli.nix
+    ./easyeffects.nix
     ./firefox.nix
     ./fzf.nix
     ./git.nix
