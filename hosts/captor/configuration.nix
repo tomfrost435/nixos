@@ -4,7 +4,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Host-specific
-  networking.hostName = "nixos-desktop";
+  networking.hostName = "captor";
   time.timeZone = "Europe/Rome";
 
   # Modules

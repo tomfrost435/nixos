@@ -18,11 +18,11 @@
 
       nixosConfigurations = {
 
-        "nixos-desktop" = nixpkgs.lib.nixosSystem {
+        "captor" = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs user version; };
           modules = [
-            ./hosts/nixos-desktop/configuration.nix
-            ./hosts/nixos-desktop/hardware-configuration.nix
+            ./hosts/captor/configuration.nix
+            ./hosts/captor/hardware-configuration.nix
             ./modules/nixos
           ];
         };
@@ -35,7 +35,7 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs user version; };
           modules = [
-            ./hosts/nixos-desktop/home.nix
+            ./hosts/captor/home.nix
             ./modules/home-manager
           ];
         };

@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-  programs.dconf.enable = true;
   programs.easyeffects = {
     enable = true;
     extraPresets = {
