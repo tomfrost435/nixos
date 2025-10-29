@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.easyeffects = {
+  services.easyeffects = {
     enable = true;
     extraPresets = {
 
