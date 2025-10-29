@@ -1,3 +1,3 @@
 {
-  programs.yt-dlp.nix.enable = true;
+  programs.yt-dlp.enable = true;
 }

@@ -11,7 +11,5 @@
   virt-manager.enable = false;
   steam.enable = true;
 
-  updates.enable = true;
-
   system.stateVersion = version;
 }
