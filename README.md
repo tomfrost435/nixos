@@ -48,6 +48,7 @@ Each host has its own `configuration.nix` and `home.nix` where they can toggle m
 - waybar
 - sort modules into folders
 - systemd?
+- thunderbird
 - xdg
 - home.file
 - env variable and session variables
