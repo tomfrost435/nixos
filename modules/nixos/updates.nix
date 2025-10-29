@@ -9,6 +9,7 @@
     system.autoUpgrade = {
       enable = true;
       dates = "weekly";
+      persistent = true;
     };
 
   };
