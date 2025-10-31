@@ -1,13 +1,4 @@
 {
-  inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-
-    home-manager = {
-      url = "github:nix-community/home-manager/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-  };
-
   outputs =
     { nixpkgs, home-manager, ... }@inputs:
     let
@@ -31,7 +22,7 @@
 
       homeConfigurations = {
 
-        "${user}" = home-manager.lib.homeManagerConfiguration {
+        "captor" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs user version; };
           modules = [
@@ -43,4 +34,13 @@
       };
 
     };
+
+  inputs = {
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 }

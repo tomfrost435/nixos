@@ -6,7 +6,7 @@
     ./firefox.nix
     ./fzf.nix
     ./git.nix
-    ./home-packages.nix
+    # ./home-packages.nix # Disabled for testing
     ./hyprland.nix
     ./java.nix
     ./mpv.nix

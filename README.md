@@ -32,6 +32,10 @@ home-manager switch --flake .#[user]
 nix flake update
 ```
 
+```bash
+nix flake check
+```
+
 ## Structure
 
 `flake.nix` leads to `hosts/[hostname]`, it also imports `nixos-modules` and `home-manager-modules` into all hosts
@@ -47,8 +51,6 @@ Each host has its own `configuration.nix` and `home.nix` where they can toggle m
 - neovim
 - waybar
 - sort modules into folders
-- systemd?
 - thunderbird
-- xdg
 - home.file
 - env variable and session variables
